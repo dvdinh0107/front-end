@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+.drop--list {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  margin: 10px;
+  padding: 10px;
+  color: rgb(119, 119, 119);
+  text-transform: uppercase;
+}
+.drop--list:hover {
+  color: rgb(244, 67, 54);
+}
+.icon {
+  /* display: none; */
+  font-size: 30px;
+  background-color: rgb(244, 67, 54);
+  color: #fff;
+  cursor: pointer;
+}
+.repon-icon {
+  display: none;
+  padding: 15px;
+}
+.repon-icon label {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.315);
+  width: 100px;
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .repon-icon {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  .navigation {
+    margin-left: -50px;
+  }
+  .search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 20px;
+  }
+  .nav {
+    margin-top: -20px;
+    padding-left: 20px;
+    display: none;
+  }
+  .nav.active {
+    display: block;
+  }
+}
+
+.drop {
+  text-align: start;
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  background: #fff;
+  z-index: 1;
+  visibility: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.drop a {
+  display: block;
+  padding-bottom: 20px;
+  margin: 10px;
+  text-decoration: none;
+  font-family: "Balsamiq Sans", cursive;
+  color: rgb(119, 119, 119);
+}
+.drop ul li {
+  display: block;
+}
+.drop.active {
+  visibility: visible;
+}
+.first--header {
+  height: 50%;
+  background-color: #000;
+  display: flex;
+}
+.content {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.first--header__logo {
+  width: 50%;
+  color: rgb(244, 67, 54);
+  display: flex;
+  align-items: center;
+}
+.logo {
+  font-size: 35px;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+.social--icon ul li {
+  float: left;
+  list-style: none;
+}
+.social--icon ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  padding: 10px;
+  transition: all 0.5s ease 0s;
+}
+.social--icon ul li a:hover {
+  color: rgb(51, 122, 183);
+}
+.last--header {
+  position: relative;
+  display: flex;
+  height: 50%;
+  transition: ease 1s;
+}
+.last--header ul li {
+  list-style: none;
+  float: left;
+  height: 100%;
+}
+@media screen and (max-width: 800px) {
+  .last--header ul li {
+    list-style: none;
+    float: none;
+    height: 100%;
+  }
+}
+.link {
+  display: flex;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  margin: 10px;
+  padding: 10px;
+  color: rgb(119, 119, 119);
+  text-transform: uppercase;
+}
+.last--header ul li a.active {
+  color: rgb(244, 67, 54);
+}
+.last--header ul li a:hover {
+  color: rgb(244, 67, 54);
+}
+.search {
+  display: flex;
+}
+.search--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search ion-icon {
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.search input {
+  outline: none;
+  border: none;
+  transition: width 0.3s ease 0s;
+  width: 0;
+}
+.search input::placeholder {
+  font-weight: 500;
+}
+
+.search input.active {
+  width: 160px;
+}
+.banner {
+  background: url(../images/banner.jpg) no-repeat 0px -399px;
+  width: 100%;
+  background-size: cover;
+  min-height: 300px;
+  position: relative;
+}
+@media screen and (max-width: 800px){
+  .banner {
+    background: url(../images/banner.jpg) no-repeat 0px -125px;
+    background-size: cover;
+    min-height: 10%;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner {
+    background: url(../images/banner.jpg) no-repeat 0px -125px;
+    background-size: cover;
+    min-height: 140px;
+    width: 100%;
+    position: relative;
+  }
+}
+.banner h3 {
+  color: #e6e6e6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 40px;
+}
+@media screen and (max-width: 700px) {
+  .banner h3 {
+    font-size: 20px;
+  }
+}
+section{
+  padding: 20px;
+  width: 1280px;
+  margin: 40px auto;
+}
+@media screen and (max-width: 800px){
+  section{
+    padding: 20px;
+    width: 100%;
+    margin: 40px auto;
+  }
+}
+section ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+section ul li{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style: none;
+  background-color: #000;
+  color: #fff;
+  padding: 11px 20px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+@media screen AND (max-width:700px) {
+  section ul li{
+    padding: 9px 11px;
+    font-size: 9px;
+  }
+
+}
+.list.active{
+  background: #F44336;
+  color:#fff;
+}
+.product{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 800px){
+  .product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+ .imgbox{
+   position: relative;
+   width: 300px;
+   height: 300px;
+   margin: 5px;
+ }
+ @media screen AND (max-width:700px) {
+  .imgbox{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+  }
+
+}
+ .imgbox img{
+   position: absolute;
+   top: 0;
+   left:0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+
+footer {
+    background-color: #000;
+    width: 100%;
+    height: 250px;
+  }
+  @media screen and (max-width: 700px) {
+    footer {
+      height: auto;
+    }
+  }
+  .footer--content {
+    margin: 0 auto;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    line-height: 2;
+  }
+  @media screen and (max-width: 700px) {
+    .footer--content {
+      display: block;
+    }
+  }
+  .footer--text {
+    padding-top: 30px;
+    height: 100%;
+    width: 33.333%;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  @media screen and (max-width: 700px) {
+    .footer--text {
+      width: 100%;
+    }
+  }
+  .footer--text h3 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Balsamiq Sans", cursive;
+    color: rgb(244, 67, 54);
+  }
+  .footer--text p {
+    font-size: 13px;
+    color: #a6a6a6;
+  }
+  .footer--address {
+    padding-top: 30px;
+    height: 100%;
+    width: 33.333%;
+  }
+  @media screen and (max-width: 700px) {
+    .footer--address {
+      width: 100%;
+      padding-bottom: 20px;
+    }
+  }
+  .footer--address h3 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Balsamiq Sans", cursive;
+    color: rgb(244, 67, 54);
+  }
+  .footer--address span {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .footer--address ion-icon {
+    padding-right: 10px;
+    font-size: 20px;
+  }
+  .footer--contact {
+    height: 100%;
+    width: 33.333%;
+    background-color: rgb(244, 67, 54);
+  }
+  @media screen and (max-width: 700px) {
+    .footer--contact {
+      width: 100%;
+    }
+  }
+  .footer--contact form {
+    padding-top: 30px;
+    width: 86%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .form-title {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Balsamiq Sans", cursive;
+    color: #fff;
+  }
+  .form-btn {
+    padding-bottom: 20px;
+  }
+  .form-btn input {
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: none;
+    outline: none;
+  }
+  .form-btn input::placeholder {
+    color: #fff;
+  }
+  .submit {
+    padding-top: 20px;
+    border: none;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    padding: 10px 15px;
+    transition: all 0.5s ease 0s;
+  }
+  .submit:hover {
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  
